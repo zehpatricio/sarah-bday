@@ -24,7 +24,6 @@
 }
 .overlay {
   z-index: 9;
-  margin: 30px;
 }
 
 div {
@@ -217,7 +216,7 @@ div {
 
 #main_title {
   text-align: center;
-  font-size: 110px;
+  font-size: 100px;
   font-family: DMSerifDisplay;
   color: #FFFFFF;
   text-shadow: 12px 12px 0 #000000;
