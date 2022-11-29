@@ -1,0 +1,10 @@
+*/examples/*
+*/lang/*
+*/src/*
+*/tests/*
+*/vendors/*
+fullPage.js/.*
+fullPage.js/*md
+fullPage.js/*json
+fullPage.js/LICENSE
+fullPage.js/*js

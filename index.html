@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Feliz aniversário</title>
+	<meta name="author" content="José Patrício de Sousa Filho" />
+	<meta name="Resource-type" content="Document" />
+	<link rel="stylesheet" type="text/css" href="utils.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="balloons.css">
+</head>
+
+<body style="background-image: url('background.jpg');">
+    <h1 id="main_title">Feliz Aniversário</h1>
+    <div class="container">
+        <div class="overlay"> <img src="img.gif" style="height: 900px"/> </div>
+        <div class="box"> <img src="cake.png"/></div>
+    </div>
+    <div class="footer">
+        <button class="button accept-button" id="accept-button" onclick="show()">Exibir credenciais</button>
+        <p id="credenciais" style="font-size: 32px; visibility: hidden;">
+            <b>Usuário: </b> rodriguessarah.dev@gmail.com <br />
+            <b>Senha: </b> sarinhacaradefarinh@ <br />
+            <a href="https://cursos.alura.com.br/onboarding/welcome">Ir para Alura</a>
+        </p>
+    </div>
+    <script src="balloons.js"></script>
+    <script>
+        function show(){
+            document.getElementById('credenciais').style.visibility = 'visible'
+        }
+    </script>
+
+</body>
+
+</html>

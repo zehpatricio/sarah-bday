@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Patriella</title>
+	<meta name="author" content="José Patrício de Sousa Filho" />
+	<meta name="Resource-type" content="Document" />
+  <link rel="stylesheet" type="text/css" href="fullPage.js/dist/fullpage.css"/>
+	<link rel="stylesheet" type="text/css" href="polaroid.css"/>
+	<link rel="stylesheet" type="text/css" href="utils.css"/>
+	<link rel="stylesheet" type="text/css" href="title.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+</head>
+<body>
+
+<div id="fullpage">
+
+	<div class="section" id="section0">
+		<div class="home" style="display: table; width: 100%; height: 100%;">
+
+			<div id="container_home">
+				<div id="navi">
+					<h1 id="main_title">José<br />Gaby</h1>
+				</div>
+				<div id="infoi">
+					<h1 id="main_title" style="font-size: 140px">&amp;</h1>
+				</div>
+			</div>
+
+			<div class="cake">
+				<div class="plate"></div>
+				<div class="layer layer-bottom"></div>
+				<div class="layer layer-middle"></div>
+				<div class="layer layer-top"></div>
+				<div class="icing"></div>
+				<div class="drip drip1"></div>
+				<div class="drip drip2"></div>
+				<div class="drip drip3"></div>
+				<div class="candle">
+					<div class="flame"></div>
+				</div>
+			</div>
+
+			<div class="arrows" onclick="scrolldown()"></div>
+
+		</div>
+    </div>
+
+	SECTIONS_HERE
+
+	<div class="section" id="section_x">
+		<div class="item" id="ix">
+			<div class="polaroid">
+				<div class="caption">To be continued...</div>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript" src="fullPage.js/dist/fullpage.js"></script>
+<script type="text/javascript">
+	ang_position = 1;
+	visited_items = [];
+
+	var myFullpage = new fullpage('#fullpage', {
+
+		sectionsColor: [
+            '#90caf9', '#eeff41', '#bdbdbd', '#ffcdd2', '#a1887f',
+            '#ffab91', '#7986cb', '#ffeb3b', '#f48fb1', '#b2ff59',
+            '#9575cd', '#ffeb3b', '#ce93d8', '#ffd740', '#90caf9',
+            '#eeff41', '#bdbdbd', '#ffcdd2', '#a1887f', '#ffab91',
+            '#7986cb', '#ffeb3b', '#f48fb1', '#b2ff59', '#9575cd',
+            '#90caf9', '#eeff41', '#bdbdbd', '#ffcdd2', '#a1887f',
+            '#ffab91', '#7986cb', '#ffeb3b', '#f48fb1', '#b2ff59',
+            '#9575cd', '#ffeb3b', '#ce93d8', '#ffd740', '#90caf9',
+            '#eeff41', '#bdbdbd', '#ffcdd2', '#a1887f', '#ffab91',
+            '#7986cb', '#ffeb3b', '#f48fb1', '#b2ff59', '#9575cd',
+            '#90caf9', '#eeff41', '#bdbdbd', '#ffcdd2', '#a1887f',
+            '#ffab91', '#7986cb', '#ffeb3b', '#f48fb1', '#b2ff59',
+            '#9575cd', '#ffeb3b', '#ce93d8', '#ffd740', '#90caf9',
+            '#eeff41', '#bdbdbd', '#ffcdd2', '#a1887f', '#ffab91',
+            '#7986cb', '#ffeb3b', '#f48fb1', '#b2ff59', '#9575cd',
+            '#90caf9', '#eeff41', '#bdbdbd', '#ffcdd2', '#a1887f',
+            '#ffab91', '#7986cb', '#ffeb3b', '#f48fb1', '#b2ff59',
+            '#9575cd', '#ffeb3b', '#ce93d8', '#ffd740', '#90caf9',
+            '#eeff41', '#bdbdbd', '#ffcdd2', '#a1887f', '#ffab91',
+            '#7986cb', '#ffeb3b', '#f48fb1', '#b2ff59', '#9575cd',
+        ],
+		navigation: true,
+		navigationPosition: 'right',
+
+		afterLoad: function(origin, destination, direction){
+			if(destination.item.childNodes[0].childNodes[1]){
+				ang = ang_position*Math.floor(Math.random() * 5)
+				ang_position = ang_position*(-1);
+
+				item_id = destination.item.childNodes[0].childNodes[1].id
+				if(item_id && !visited_items.includes(item_id)){
+					visited_items.push(item_id);
+					element = document.getElementById(item_id);
+					element.style.filter = "grayscale(0%)";
+					element.style.transform = "scale(0.8, 0.8) rotate("+ang+"deg)";
+				}
+			}
+		}
+	});
+
+	function scrolldown(){
+		myFullpage.moveTo(2);
+	}
+</script>
+</body>
+</html>
